@@ -1,51 +1,18 @@
 import React from 'react';
 import HomePage from './pages/homepage/homepage.component.jsx';
 import { Route, Switch, Link } from 'react-router-dom';
+import ShopComponent from './pages/shop/shop-component.jsx';
 
-const HatsPage = (props) => {
+
+const ShopComp = (props) => {
   console.log(props);
   return (
     <div>
-      <h1>HAts Page</h1>
-      <Link to={`${props.match.url}/12`}> hat id : 12</Link>
-    </div>
+      SHOP PAGE
+  <button onClick="download('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', 'demoVideo.mp4', 'video')" ></div>Click me</button>
+    </div >
   )
 }
-
-// const JacketsPage = (props) => {
-//   console.log(props);
-//   return (
-//     <div>
-//       <button onClick={() => props.history.push('/jackets')}>History</button>
-//       <h1>jackets mOfos</h1>
-//     </div>
-//   )
-// }
-// const SnikersPage = (props) => {
-//   console.log(props);
-//   return (
-//     <div>
-//       <h1>snikers mOfos</h1>
-//     </div>
-//   )
-// }
-// const MensPage = (props) => {
-//   console.log(props);
-//   return (
-//     <div>
-//       <h1>mens collection mOfos</h1>
-//     </div>
-//   )
-// }
-
-// const WomensPage = (props) => {
-//   console.log(props);
-//   return (
-//     <div>
-//       <h1>womens collection mOfos : {props.match.params.productId}</h1>
-//     </div>
-//   )
-// }
 
 
 function App() {
@@ -53,12 +20,8 @@ function App() {
     <div>
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route exact path='/hats' component={HatsPage} />
-        {/* <Route path='/jackets' component={JacketsPage} />
-        <Route path='/snikers' component={SnikersPage} />
-        <Route path='/mens' component={MensPage} />
-        <Route exact path='/womens' component={WomensPage} />
-        <Route path='/womens/:productId' component={WomensPage} /> */}
+        <Route path='/shop' component={ShopComponent} />
+        <Route path='/shop1' component={ShopComp} />
       </Switch>
 
     </div>
